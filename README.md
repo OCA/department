@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/OCA/department?branch=master)](https://travis-ci.org/OCA/department)
+[![Build Status](https://api.travis-ci.org/OCA/department.png?branch=master)](https://travis-ci.org/OCA/department)
 [![Coverage Status](https://img.shields.io/coveralls/OCA/department)](https://coveralls.io/r/OCA/department?branch=master)
 
 Odoo Department Modules
