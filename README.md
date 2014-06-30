@@ -1,0 +1,9 @@
+[![Build Status](https://travis-ci.org/OCA/department?branch=master)](https://travis-ci.org/OCA/department)
+[![Coverage Status](https://img.shields.io/coveralls/OCA/department)](https://coveralls.io/r/OCA/department?branch=master)
+
+Odoo Department Modules
+=======================
+
+This project aims to add Department context information to Odoo Models.
+
+This can help organizations where processes are strongly organized by Department.
