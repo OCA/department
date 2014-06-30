@@ -20,7 +20,6 @@ env:
 # Install tested version of odoo (official or ocb)
 # Get modules from other repos which have dependencies (in this case travel requires modules from lp:partner-contact-management and lp:openerp-hr
 install: 
-    - pip -V  # check pip version
     - pip install coveralls flake8
     - pip install http://download.gna.org/pychart/PyChart-1.39.tar.gz
     - pip install ${ODOO}
@@ -29,6 +28,7 @@ install:
 # Pre-install modules and dependencies
 before_script: 
     - createdb test
+    - sudo python -m smtpd -n -c DebuggingServer localhost:25 &
 
 # Test with flake, ignore F401 for __init__.py files, use a max length of 120
 # Run tests with coverage
