@@ -10,8 +10,8 @@ python:
 #    - "2.6"  # not supported by odoo 8
 
 env:
-#    - ODOO="https://github.com/savoirfairelinux/odoo/archive/setuptools-addons.tar.gz"  # Temp until https://github.com/odoo/odoo/issues/185 or https://github.com/odoo/odoo/issues/441 is fixed
-    - ODOO="https://github.com/odoo/odoo/archive/master.tar.gz"
+    - ODOO="https://github.com/savoirfairelinux/odoo/archive/setuptools-addons.tar.gz"  # Temp until https://github.com/odoo/odoo/issues/185 or https://github.com/odoo/odoo/issues/441 is fixed
+#    - ODOO="https://github.com/odoo/odoo/archive/master.tar.gz"
 #    - ODOO="https://github.com/OCA/OCB/archive/master.zip"
 
 # Need coveralls for coverage reports
