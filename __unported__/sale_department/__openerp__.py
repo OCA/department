@@ -2,7 +2,6 @@
 ##############################################################################
 #
 #    Author: Joël Grand-guillaume (Camptocamp)
-#    Contributor: Yannick Vaucher (Camptocamp)
 #    Copyright 2011 Camptocamp SA
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -20,23 +19,24 @@
 #
 ##############################################################################
 {
-    'name' : 'CRM with Department Categorization',
-    'version' : '1.0.1',
-    'category' : 'Generic Modules/CRM & SRM',
-    'description': '''
-
-Add the department on Sales Team (with related field on Lead & Opportunities)
-as well as the related filter and button in the search form.
+    'name' : 'Sales Order with Department Categorization',
+    'version' : '1.0',
+    'category' : 'Generic Modules/Sales & Purchases',
+    'description':
+'''
+    Add the department on Sales Order and Customer Invoices as well as the related filter and button in the search form.
 
 ''',
     'author' : 'Camptocamp',
     'website': 'http://camptocamp.com',
-    'depends' : ['crm', 'hr'],
-    'data' : ['crm_view.xml'],
-    'demo_xml' : [],
-    'installable': True,
+    'depends' : ['sale', 'invoice_department', 'hr'],
+    'data' : [
+        'sale_view.xml',
+    ],
+    'demo' : [],
+    'installable': False,
     'auto_install': False,
-    'application': True,
+    'application': False,
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2012 Daniel Reis
+#    Author: Joël Grand-guillaume (Camptocamp)
+#    Contributor: Yannick Vaucher (Camptocamp)
+#    Copyright 2011 Camptocamp SA
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,27 +20,23 @@
 #
 ##############################################################################
 {
-    'name': 'Project Issue with Department',
-    'version': '1.1',
-    "category": "Project Management",
-    'description': """\
-Add Department field to Project Issues.
+    'name' : 'CRM with Department Categorization',
+    'version' : '1.0.1',
+    'category' : 'Generic Modules/CRM & SRM',
+    'description': '''
 
-Selecting a Project for an issue will automatically populate this with the
-Project's defined Department.
-""",
-    'author': 'Daniel Reis',
-    'website': 'daniel.reis@securitas.pt',
-    'depends': [
-        'project_issue',
-        'project_department',
-        ],
-    'update_xml': [
-        'project_issue_view.xml',
-        'security/ir.model.access.csv',
-    ],
-    'installable': True,
-    'application': False,
-    'auto_install': True,
+Add the department on Sales Team (with related field on Lead & Opportunities)
+as well as the related filter and button in the search form.
+
+''',
+    'author' : 'Camptocamp',
+    'website': 'http://camptocamp.com',
+    'depends' : ['crm', 'hr'],
+    'data' : ['crm_view.xml'],
+    'demo_xml' : [],
+    'installable': False,
+    'auto_install': False,
+    'application': True,
 }
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

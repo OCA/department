@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Author: Joël Grand-guillaume (Camptocamp)
-#    Copyright 2011 Camptocamp SA
+#    Copyright (C) 2012 Daniel Reis
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,24 +18,27 @@
 #
 ##############################################################################
 {
-    'name' : 'Sales Order with Department Categorization',
-    'version' : '1.0',
-    'category' : 'Generic Modules/Sales & Purchases',
-    'description':
-'''
-    Add the department on Sales Order and Customer Invoices as well as the related filter and button in the search form.
+    'name': 'Project Issue with Department',
+    'version': '1.1',
+    "category": "Project Management",
+    'description': """\
+Add Department field to Project Issues.
 
-''',
-    'author' : 'Camptocamp',
-    'website': 'http://camptocamp.com',
-    'depends' : ['sale', 'invoice_department', 'hr'],
-    'data' : [
-        'sale_view.xml',
+Selecting a Project for an issue will automatically populate this with the
+Project's defined Department.
+""",
+    'author': 'Daniel Reis',
+    'website': 'daniel.reis@securitas.pt',
+    'depends': [
+        'project_issue',
+        'project_department',
+        ],
+    'update_xml': [
+        'project_issue_view.xml',
+        'security/ir.model.access.csv',
     ],
-    'demo' : [],
-    'installable': True,
-    'auto_install': False,
+    'installable': False,
     'application': False,
+    'auto_install': True,
 }
-
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
