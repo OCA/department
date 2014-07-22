@@ -1,5 +1,5 @@
-[![Build Status](https://api.travis-ci.org/OCA/department.png?branch=master)](https://travis-ci.org/OCA/department)
-[![Coverage Status](https://img.shields.io/coveralls/OCA/department.svg)](https://coveralls.io/r/OCA/department)
+[![Build Status](https://api.travis-ci.org/OCA/department.png?branch=8.0)](https://travis-ci.org/OCA/department)
+[![Coverage Status](https://coveralls.io/repos/OCA/department/badge.png?branch=8.0)](https://coveralls.io/r/OCA/department?branch=8.0)
 
 Odoo Department Modules
 =======================
