@@ -23,4 +23,4 @@ msgstr ""
 #: field:account.analytic.line,department_id:0
 #: view:account.analytic.line:0
 msgid "Department"
-msgstr ""
+msgstr "Departamento"
