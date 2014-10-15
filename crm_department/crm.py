@@ -62,9 +62,16 @@ class CrmLead(orm.Model):
                     res['department_id'] = employee.department_id.id
         return {'value': res}
     
+    def onchange_section_id(self, cr, uid, ids, section_id=False, context=None):
+        """ Updates res dictionary with the department corresponding to the section"""
+        res = {}
+        if section_id:
+            section = self.pool.get('crm.case.section').browse(cr, uid, section_id, context=context)
+            if section.department_id.id:
+                res.update({'department_id': section.department_id.id})
+        return {'value':res}
+    
     _columns = {
         'department_id': fields.many2one('hr.department', 'Department'),
         }
 
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
