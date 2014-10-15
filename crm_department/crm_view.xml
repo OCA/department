@@ -76,6 +76,9 @@
         <xpath expr="/form/sheet/group/group[3]/div" position="after">
           <field name="department_id" widget="selection"/>
         </xpath>
+        <xpath expr="//field[@name='user_id']" position="attributes">
+          <attribute name="on_change">onchange_user_id(user_id)</attribute>
+        </xpath>
       </field>
     </record>
 
