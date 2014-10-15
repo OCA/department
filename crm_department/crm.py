@@ -46,22 +46,6 @@ class CrmSalesTeam(orm.Model):
 class CrmLead(orm.Model):
     _inherit = "crm.lead"
 
-    def on_change_user(self, cr, uid, ids, user_id, context=None):
-        """ Updates res dictionary with the department 
-        corresponding to the section """
-        employee_obj = self.pool['hr.employee']
-        res = {}        
-        res['department_id'] = False
-        if user_id:
-            employee_ids = employee_obj.search(cr, uid, 
-                                               [('user_id','=',user_id)],
-                                                context=context)
-            for employee in employee_obj.browse(cr, uid, 
-                                               employee_ids, context=context):
-                if employee.department_id.id:
-                    res['department_id'] = employee.department_id.id
-        return {'value': res}
-    
     def onchange_section_id(self, cr, uid, ids, section_id=False, context=None):
         """ Updates res dictionary with the department corresponding to the section"""
         res = {}
@@ -69,6 +53,8 @@ class CrmLead(orm.Model):
             section = self.pool.get('crm.case.section').browse(cr, uid, section_id, context=context)
             if section.department_id.id:
                 res.update({'department_id': section.department_id.id})
+            if section.user_id.id:
+                res.update({'user_id':section.user_id.id})
         return {'value':res}
     
     _columns = {
