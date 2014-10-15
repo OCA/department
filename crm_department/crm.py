@@ -22,6 +22,7 @@
 ##############################################################################
 from openerp.osv import orm, fields
 
+
 class CrmSalesTeam(orm.Model):
     _inherit = "crm.case.section"
     _columns = {
@@ -31,11 +32,12 @@ class CrmSalesTeam(orm.Model):
     def _get_department(self, cr, uid, ids, context=None):
         employee_obj = self.pool['hr.employee']
         department_id = False
-        employee_ids = employee_obj.search(cr, uid, [('user_id','=', uid)])
+        employee_ids = employee_obj.search(cr, uid, [('user_id', '=', uid)])
         if employee_ids:
-            department_id = employee_obj.browse(cr, uid, 
-                                                employee_ids[0], 
-                                                context=context).department_id.id
+            department_id = employee_obj.browse(cr, uid,
+                                                employee_ids[0],
+                                                context=context
+                                                ).department_id.id
         return department_id
 
     _defaults = {
@@ -46,18 +48,21 @@ class CrmSalesTeam(orm.Model):
 class CrmLead(orm.Model):
     _inherit = "crm.lead"
 
-    def onchange_section_id(self, cr, uid, ids, section_id=False, context=None):
-        """ Updates res dictionary with the department corresponding to the section"""
+    def onchange_section_id(self, cr, uid,
+                            ids, section_id=False, context=None):
+        """ Updates res dictionary with the department
+        corresponding to the section"""
         res = {}
         if section_id:
-            section = self.pool.get('crm.case.section').browse(cr, uid, section_id, context=context)
+            section = self.pool.get('crm.case.section').browse(cr, uid,
+                                                               section_id,
+                                                               context=context)
             if section.department_id.id:
                 res.update({'department_id': section.department_id.id})
             if section.user_id.id:
-                res.update({'user_id':section.user_id.id})
-        return {'value':res}
-    
+                res.update({'user_id': section.user_id.id})
+        return {'value': res}
+
     _columns = {
         'department_id': fields.many2one('hr.department', 'Department'),
         }
-
