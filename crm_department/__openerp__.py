@@ -31,8 +31,6 @@ as well as the related filter and button in the search form.
     'website': 'http://camptocamp.com',
     'depends': ['crm', 'hr'],
     'data': ['crm_view.xml'],
-    'demo_xml': [],
     'installable': True,
-    'auto_install': False,
     'application': True,
 }

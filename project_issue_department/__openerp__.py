@@ -33,11 +33,10 @@ Project's defined Department.
         'project_issue',
         'project_department',
     ],
-    'update_xml': [
+    'data': [
         'project_issue_view.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,
-    'application': False,
     'auto_install': True,
 }
