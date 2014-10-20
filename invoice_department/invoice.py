@@ -20,22 +20,23 @@
 ##############################################################################
 from openerp.osv import orm, fields
 
+
 class AccountInvoice(orm.Model):
     _inherit = "account.invoice"
     _columns = {
         'department_id': fields.many2one('hr.department', 'Department'),
-        }
+    }
 
     def _get_department(self, cr, uid, ids, context=None):
         employee_obj = self.pool.get('hr.employee')
         department_id = False
-        employee_ids = employee_obj.search(cr, uid, [('user_id','=', uid)])
+        employee_ids = employee_obj.search(
+            cr, uid, [('user_id', '=', uid)])
         if employee_ids:
-            department_id = employee_obj.browse(cr, uid, employee_ids[0], context=context).department_id.id
+            department_id = employee_obj.browse(
+                cr, uid, employee_ids[0], context=context).department_id.id
         return department_id
 
     _defaults = {
         'department_id': _get_department,
-        }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+    }

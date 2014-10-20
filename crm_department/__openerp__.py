@@ -20,20 +20,18 @@
 #
 ##############################################################################
 {
-    'name' : 'CRM with Department Categorization',
-    'version' : '1.0.1',
-    'category' : 'Generic Modules/CRM & SRM',
+    'name': 'CRM with Department Categorization',
+    'version': '1.0.1',
+    'category': 'Generic Modules/CRM & SRM',
     'description': '''
-
 Add the department on Sales Team (with related field on Lead & Opportunities)
 as well as the related filter and button in the search form.
-
 ''',
-    'author' : 'Camptocamp',
+    'author': 'Camptocamp',
     'website': 'http://camptocamp.com',
-    'depends' : ['crm', 'hr'],
-    'data' : ['crm_view.xml'],
-    'demo_xml' : [],
+    'depends': ['crm', 'hr'],
+    'data': ['crm_view.xml'],
+    'demo_xml': [],
     'installable': True,
     'auto_install': False,
     'application': True,

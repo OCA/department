@@ -20,23 +20,20 @@
 ##############################################################################
 
 {
-    'name' : 'Invoices with Department Categorization',
-    'version' : '1.0',
-    'category' : 'Generic Modules/Sales & Purchases',
-    'description':
-'''
-    Add the department on Invoices as well as the related filter and button in the search form.
-
+    'name': 'Invoices with Department Categorization',
+    'version': '1.0',
+    'category': 'Generic Modules/Sales & Purchases',
+    'description': '''\
+Add the department on Invoices as well as the related filter and button in the
+search form.
 ''',
-    'author' : 'Camptocamp',
+    'author': 'Camptocamp',
     'website': 'http://camptocamp.com',
-    'depends' : ['account', 'hr'],
-    'data' : ['invoice_view.xml',],
-    'demo' : [],
+    'depends': ['account', 'hr'],
+    'data': ['invoice_view.xml'],
+    'demo': [],
     'test': [],
     'installable': True,
     'auto_install': False,
     'application': False
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
