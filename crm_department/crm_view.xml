@@ -79,7 +79,7 @@
         </xpath>
 
     <!-- Inactive on change, because the user is already changed by the section_id on change -->
-        <field name="user_id" on_change="on_change_user(user_id, context)" position="attributes">
+        <field name="user_id" position="attributes">
           <attribute name="on_change"></attribute>
         </field>
 
