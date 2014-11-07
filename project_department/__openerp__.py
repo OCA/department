@@ -6,7 +6,8 @@
     "license": "AGPL-3",
     "category": "Generic Modules/Projects & Services",
     "description": """\
-Add Department to Projects and task to corresponding tree, search and form  views.
+Add Department to Projects and task to corresponding tree, search and form
+ views.
 """,
     "website": "http://camptocamp.com",
     "depends": ["project", "analytic_department"],

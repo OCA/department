@@ -19,24 +19,21 @@
 #
 ##############################################################################
 {
-    'name' : 'Sales Order with Department Categorization',
-    'version' : '1.0',
-    'category' : 'Generic Modules/Sales & Purchases',
-    'description':
-'''
-    Add the department on Sales Order and Customer Invoices as well as the related filter and button in the search form.
-
+    'name': 'Sales Order with Department Categorization',
+    'version': '1.0',
+    'category': 'Generic Modules/Sales & Purchases',
+    'description': '''\
+Add the department on Sales Order and Customer Invoices as well as the related
+filter and button in the search form.
 ''',
-    'author' : 'Camptocamp',
+    'author': 'Camptocamp',
     'website': 'http://camptocamp.com',
-    'depends' : ['sale', 'invoice_department', 'hr'],
-    'data' : [
+    'depends': ['sale', 'invoice_department', 'hr'],
+    'data': [
         'sale_view.xml',
     ],
-    'demo' : [],
+    'demo': [],
     'installable': True,
     'auto_install': False,
     'application': False,
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

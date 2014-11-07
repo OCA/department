@@ -27,7 +27,7 @@ class CrmSalesTeam(orm.Model):
     _inherit = "crm.case.section"
     _columns = {
         'department_id': fields.many2one('hr.department', 'Department'),
-        }
+    }
 
     def _get_department(self, cr, uid, ids, context=None):
         employee_obj = self.pool['hr.employee']
@@ -42,7 +42,7 @@ class CrmSalesTeam(orm.Model):
 
     _defaults = {
         'department_id': _get_department,
-        }
+    }
 
 
 class CrmLead(orm.Model):
@@ -54,9 +54,8 @@ class CrmLead(orm.Model):
         corresponding to the section"""
         res = {}
         if section_id:
-            section = self.pool.get('crm.case.section').browse(cr, uid,
-                                                               section_id,
-                                                               context=context)
+            section = self.pool.get('crm.case.section').browse(
+                cr, uid, section_id, context=context)
             if section.department_id.id:
                 res.update({'department_id': section.department_id.id})
             if section.user_id.id:
@@ -65,4 +64,4 @@ class CrmLead(orm.Model):
 
     _columns = {
         'department_id': fields.many2one('hr.department', 'Department'),
-        }
+    }
