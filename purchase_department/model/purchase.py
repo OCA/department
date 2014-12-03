@@ -13,6 +13,7 @@ class PurchaseOrder(models.Model):
     def _prepare_invoice(self, cr, uid, order, line_ids, context=None):
         result = super(PurchaseOrder, self)._prepare_invoice(cr, uid, order,
                                                              line_ids, context)
+        result['department_id'] = order.department_id.id
         return result
 
     department_id = fields.Many2one('hr.department', 'Department',

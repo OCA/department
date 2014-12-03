@@ -16,3 +16,9 @@ class TestPropagateDepartment(TransactionCase):
         invoice_data = self.PO._prepare_invoice(self.po, [])
 
         self.assertFalse(invoice_data.get('department_id'))
+
+    def test_it_propagates_a(self):
+        self.po.department_id = self.dep_rd
+        invoice_data = self.PO._prepare_invoice(self.po, [])
+
+        self.assertEqual(self.dep_rd.id, invoice_data.get('department_id'))
