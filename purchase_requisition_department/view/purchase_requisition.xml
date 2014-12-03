@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record id="view_purchase_requisition_tree" model="ir.ui.view">
+      <field name="name">view_purchase_requisition_tree</field>
+      <field name="model">purchase.requisition</field>
+      <field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_tree" />
+      <field name="arch" type="xml">
+        <field name="user_id" position="after">
+          <field name="department_id" />
+        </field>
+      </field>
+    </record>
+
+  </data>
+</openerp>
