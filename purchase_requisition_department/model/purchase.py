@@ -11,10 +11,3 @@ class PurchaseRequisition(models.Model):
 
     department_id = fields.Many2one('hr.department', 'Department',
                                     default=_get_my_department)
-
-
-class PurchaseRequisitionLine(models.Model):
-    _inherit = 'purchase.requisition.line'
-
-    department_id = fields.Many2one(related='requisition_id.department_id',
-                                    store=True)
