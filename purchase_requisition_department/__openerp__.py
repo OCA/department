@@ -6,7 +6,7 @@
     'author': 'Camptocamp',
     "license": "AGPL-3",
     'website': 'http://camptocamp.com',
-    'depends': ['hr', 'purchase_requisition'],
+    'depends': ['hr', 'purchase_requisition', 'purchase_department'],
     'data': ['view/purchase_requisition.xml'],
     'installable': True,
 }
