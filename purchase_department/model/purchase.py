@@ -11,3 +11,10 @@ class PurchaseOrder(models.Model):
 
     department_id = fields.Many2one('hr.department', 'Department',
                                     default=_get_my_department)
+
+
+class PurchaseOrderLine(models.Model):
+    _inherit = 'purchase.order.line'
+
+    department_id = fields.Many2one(related='order_id.department_id',
+                                    store=True)

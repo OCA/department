@@ -7,6 +7,7 @@
     "license": "AGPL-3",
     'website': 'http://camptocamp.com',
     'depends': ['invoice_department', 'hr', 'purchase'],
-    'data': ['view/purchase.xml'],
+    'data': ['view/purchase_order.xml',
+             'view/purchase_order_line.xml'],
     'installable': True,
 }
