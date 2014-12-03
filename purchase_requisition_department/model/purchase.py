@@ -9,7 +9,6 @@ class PurchaseRequisition(models.Model):
         my_user = self.env['res.users'].browse(self.env.uid)
         return my_user.employee_ids[0].department_id
 
-
     @api.model
     def _prepare_purchase_order(self, requisition, supplier):
         """Propagate transport documents from tender to RFQ"""
