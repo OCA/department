@@ -31,6 +31,13 @@
       <field name="model">crm.lead</field>
       <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
       <field name="arch" type="xml">
+        <xpath expr="/form/sheet/group/group[3]/div/field[@name='section_id']" position="attributes">
+          <attribute name="on_change">onchange_section_id(section_id)</attribute>
+        </xpath>
+	    <!-- Inactive on change, because the user is already changed by the section_id on change -->
+        <field name="user_id" on_change="on_change_user(user_id, context)" position="attributes">
+          <attribute name="on_change"></attribute>
+        </field>
         <xpath expr="/form/sheet/group/group[3]/field[@name='type']" position="after">
           <field name="department_id" widget="selection"/>
         </xpath>
