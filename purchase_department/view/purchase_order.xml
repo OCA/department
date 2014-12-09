@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record id="purchase_order_tree" model="ir.ui.view">
+      <field name="name">purchase_order_tree</field>
+      <field name="model">purchase.order</field>
+      <field name="inherit_id" ref="purchase.purchase_order_tree" />
+      <field name="arch" type="xml">
+        <field name="origin" position="after">
+          <field name="department_id" />
+        </field>
+      </field>
+    </record>
+
+    <record id="purchase_order_form" model="ir.ui.view">
+      <field name="name">purchase_order_form</field>
+      <field name="model">purchase.order</field>
+      <field name="inherit_id" ref="purchase.purchase_order_form" />
+      <field name="arch" type="xml">
+        <field name="partner_ref" position="after">
+          <field name="department_id" />
+        </field>
+      </field>
+    </record>
+
+    <record id="view_purchase_order_filter" model="ir.ui.view">
+      <field name="name">view_purchase_order_filter</field>
+      <field name="model">purchase.order</field>
+      <field name="inherit_id" ref="purchase.view_purchase_order_filter" />
+      <field name="arch" type="xml">
+        <xpath expr="//filter[@string='Supplier']" position="after">
+          <filter string="Department" context="{'group_by':'department_id'}"/>
+        </xpath>
+        <field name="partner_id" position="after">
+          <field name="department_id"/>
+        </field>
+      </field>
+    </record>
+
+  </data>
+</openerp>
