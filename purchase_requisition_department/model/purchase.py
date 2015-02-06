@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Author: Leonardo Pistone
-# Copyright 2014 Camptocamp SA (http://www.camptocamp.com)
+# Copyright 2014-2015 Camptocamp SA (http://www.camptocamp.com)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -22,8 +22,9 @@ class PurchaseRequisition(models.Model):
     _inherit = 'purchase.requisition'
 
     def _get_my_department(self):
-        my_user = self.env['res.users'].browse(self.env.uid)
-        return my_user.employee_ids[0].department_id
+        employees = self.env.user.employee_ids
+        return (employees and employees[0].department_id
+                or self.env['hr.department'])
 
     @api.model
     def _prepare_purchase_order(self, requisition, supplier):
