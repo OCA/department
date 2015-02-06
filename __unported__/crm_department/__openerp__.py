@@ -31,6 +31,7 @@ as well as the related filter and button in the search form.
 ''',
     'author' : 'Camptocamp',
     'website': 'http://camptocamp.com',
+    'license': 'AGPL-3',
     'depends' : ['crm', 'hr'],
     'data' : ['crm_view.xml'],
     'demo_xml' : [],
