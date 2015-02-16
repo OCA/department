@@ -23,8 +23,8 @@ class PurchaseOrder(models.Model):
 
     def _get_my_department(self):
         employees = self.env.user.employee_ids
-        return (employees and employees[0].department_id
-                or self.env['hr.department'])
+        return (employees[0].department_id if employees
+                else self.env['hr.department'])
 
     @api.cr_uid_context
     def _prepare_invoice(self, cr, uid, order, line_ids, context=None):

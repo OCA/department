@@ -23,8 +23,8 @@ class PurchaseRequisition(models.Model):
 
     def _get_my_department(self):
         employees = self.env.user.employee_ids
-        return (employees and employees[0].department_id
-                or self.env['hr.department'])
+        return (employees[0].department_id if employees
+                else self.env['hr.department'])
 
     @api.model
     def _prepare_purchase_order(self, requisition, supplier):
