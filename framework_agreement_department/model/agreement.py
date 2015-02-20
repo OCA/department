@@ -21,10 +21,5 @@ from openerp import models, fields
 class Agreement(models.Model):
     _inherit = 'framework.agreement'
 
-    def _get_my_department(self):
-        employees = self.env.user.employee_ids
-        return (employees and employees[0].department_id or
-                self.env['hr.department'])
-
     department_id = fields.Many2one('hr.department', 'Department',
-                                    default=_get_my_department)
+                                    related='portfolio_id.department_id')
