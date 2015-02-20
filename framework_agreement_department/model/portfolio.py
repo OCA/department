@@ -27,3 +27,10 @@ class Portfolio(models.Model):
 
     department_id = fields.Many2one('hr.department', 'Department',
                                     default=_get_my_department)
+
+    _sql_constraints = [
+        ('uniq_portfolio',
+         'unique(supplier_id, company_id, department_id)',
+         'There can be only one portfolio '
+         'per supplier, department and company.'),
+    ]
