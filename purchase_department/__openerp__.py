@@ -19,7 +19,7 @@
     'name': 'Purchases with Department Categorization',
     'version': '1.0',
     'category': 'Generic Modules/Sales & Purchases',
-    'author': 'Camptocamp',
+    'author': "Camptocamp,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     'website': 'http://camptocamp.com',
     'depends': ['invoice_department', 'hr', 'purchase'],
