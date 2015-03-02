@@ -23,7 +23,7 @@
 {
     "name" : "CRM with Department Categorization",
     "version" : "1.0",
-    "author" : "Camptocamp",
+    "author" : "Camptocamp,Odoo Community Association (OCA)",
     "category" : "Generic Modules/CRM & SRM",
     "description": """
     

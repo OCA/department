@@ -32,7 +32,7 @@
 {
     "name" : "Invoices with Department Categorization",
     "version" : "1.0",
-    "author" : "Camptocamp",
+    "author" : "Camptocamp,Odoo Community Association (OCA)",
     "category" : "Generic Modules/Sales & Purchases",
     "description":
 """Add the department on Invoices.
