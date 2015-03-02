@@ -27,7 +27,7 @@
 Add the department on Invoices as well as the related filter and button in the
 search form.
 ''',
-    'author': 'Camptocamp',
+    'author': "Camptocamp,Odoo Community Association (OCA)",
     'website': 'http://camptocamp.com',
     'depends': ['account', 'hr'],
     'data': ['invoice_view.xml'],

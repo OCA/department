@@ -27,7 +27,7 @@
 Add the department on Sales Team (with related field on Lead & Opportunities)
 as well as the related filter and button in the search form.
 ''',
-    'author': 'Camptocamp',
+    'author': "Camptocamp,Odoo Community Association (OCA)",
     'website': 'http://camptocamp.com',
     'depends': ['crm', 'hr'],
     'data': ['crm_view.xml'],
