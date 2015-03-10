@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record id="portfolio_tree_view" model="ir.ui.view">
+      <field name="name">portfolio_tree_view</field>
+      <field name="model">framework.agreement.portfolio</field>
+      <field name="inherit_id" ref="framework_agreement.portfolio_tree_view" />
+      <field name="arch" type="xml">
+        <field name="name" position="after">
+          <field name="department_id" />
+        </field>
+      </field>
+    </record>
+
+    <record id="portfolio_form_view" model="ir.ui.view">
+      <field name="name">portfolio_form_view</field>
+      <field name="model">framework.agreement.portfolio</field>
+      <field name="inherit_id" ref="framework_agreement.portfolio_form_view" />
+      <field name="arch" type="xml">
+        <field name="name" position="after">
+          <field name="department_id" />
+        </field>
+      </field>
+    </record>
+
+    <record id="portfolio_search_view" model="ir.ui.view">
+      <field name="name">portfolio_search_view</field>
+      <field name="model">framework.agreement.portfolio</field>
+      <field name="inherit_id" ref="framework_agreement.portfolio_search_view" />
+      <field name="arch" type="xml">
+        <xpath expr="//filter[@string='Supplier']" position="after">
+          <filter string="Department" context="{'group_by':'department_id'}"/>
+        </xpath>
+        <field name="supplier_id" position="after">
+          <field name="department_id"/>
+        </field>
+      </field>
+    </record>
+
+  </data>
+</openerp>

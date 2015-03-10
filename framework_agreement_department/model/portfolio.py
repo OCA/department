@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
 # Author: Leonardo Pistone
-# Copyright 2014-2015 Camptocamp SA (http://www.camptocamp.com)
+# Copyright 2015 Camptocamp SA (http://www.camptocamp.com)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -18,8 +17,20 @@
 from openerp import models, fields
 
 
-class Agreement(models.Model):
-    _inherit = 'framework.agreement'
+class Portfolio(models.Model):
+    _inherit = 'framework.agreement.portfolio'
+
+    def _get_my_department(self):
+        employees = self.env.user.employee_ids
+        return (employees and employees[0].department_id or
+                self.env['hr.department'])
 
     department_id = fields.Many2one('hr.department', 'Department',
-                                    related='portfolio_id.department_id')
+                                    default=_get_my_department)
+
+    _sql_constraints = [
+        ('uniq_portfolio',
+         'unique(supplier_id, company_id, department_id)',
+         'There can be only one portfolio '
+         'per supplier, department and company.'),
+    ]
