@@ -23,7 +23,7 @@
     "license": "AGPL-3",
     'website': 'http://camptocamp.com',
     'depends': ['framework_agreement', 'hr'],
-    'data': ['view/agreement.xml',
+    'data': ['view/pricelist.xml',
              'view/portfolio.xml'],
     'installable': True,
 }
