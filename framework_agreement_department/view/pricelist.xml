@@ -18,7 +18,7 @@
       <field name="model">product.pricelist</field>
       <field name="inherit_id" ref="framework_agreement.product_pricelist_view" />
       <field name="arch" type="xml">
-        <field name="name" position="after">
+        <field name="active" position="after">
           <field name="department_id" />
         </field>
       </field>
