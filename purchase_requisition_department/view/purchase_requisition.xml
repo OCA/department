@@ -19,7 +19,7 @@
       <field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_form" />
       <field name="arch" type="xml">
         <field name="user_id" position="after">
-          <field name="department_id" />
+          <field name="department_id" attrs="{'readonly': [('state', '!=', 'draft')]}" />
         </field>
       </field>
     </record>
