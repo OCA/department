@@ -13,10 +13,10 @@
       </field>
     </record>
 
-    <record id="product_pricelist_view" model="ir.ui.view">
-      <field name="name">product_pricelist_view</field>
+    <record id="agreement_view_form" model="ir.ui.view">
+      <field name="name">agreement_view_form</field>
       <field name="model">product.pricelist</field>
-      <field name="inherit_id" ref="framework_agreement.product_pricelist_view" />
+      <field name="inherit_id" ref="framework_agreement.agreement_view_form" />
       <field name="arch" type="xml">
         <field name="active" position="after">
           <field name="department_id" />
