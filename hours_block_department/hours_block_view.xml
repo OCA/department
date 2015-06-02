@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record id="view_account_invoice_filter" model="ir.ui.view">
+            <field name="name">account.hours.block.select (analytic_hours_block_department)</field>
+            <field name="model">account.hours.block</field>
+            <field name="inherit_id" ref="analytic_hours_block.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='partner_id']" position="after">
+                        <field name="department_id" string="Department"/>
+                    </xpath>
+                    <xpath expr="//filter[@string='Responsible']" position="after">
+                        <filter string="Department" name="group_by_dept" icon="terp-personal" domain="[]"  context="{'group_by': 'department_id'}"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="hours_block_invoice_form" model="ir.ui.view">
+            <field name="name">account.hours.block.form (analytic_hours_block_department)</field>
+            <field name="model">account.hours.block</field>
+            <field name="inherit_id" ref="analytic_hours_block.hours_block_invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="department_id" string="Department"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="invoice_tree_hour_block" model="ir.ui.view">
+            <field name="name">account.hours.block.tree (analytic_hours_block_department)</field>
+            <field name="model">account.hours.block</field>
+            <field name="inherit_id" ref="analytic_hours_block.invoice_tree_hour_block"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="department_id" string="Department"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="analytic_hours_block.action_all_block_hour" model="ir.actions.act_window">
+            <field name="context">{'search_default_running': 1, 'search_default_group_by_dept': 1}</field>
+        </record>
+
+    </data>
+</openerp>
