@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Author: Leonardo Pistone
-# Copyright 2014-2015 Camptocamp SA (http://www.camptocamp.com)
+# Copyright 2015 Camptocamp SA (http://www.camptocamp.com)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -18,8 +18,8 @@
 from openerp import models, fields
 
 
-class Agreement(models.Model):
-    _inherit = 'framework.agreement'
+class Pricelist(models.Model):
+    _inherit = 'product.pricelist'
 
     department_id = fields.Many2one('hr.department', 'Department',
                                     related='portfolio_id.department_id')

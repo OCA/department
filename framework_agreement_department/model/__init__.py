@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Author: Leonardo Pistone
-# Copyright 2014 Camptocamp SA (http://www.camptocamp.com)
+# Copyright 2014-2015 Camptocamp SA (http://www.camptocamp.com)
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -15,5 +15,5 @@
 # You should have received a copy of the GNU Affero General Public Lice
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from . import agreement
+from . import pricelist
 from . import portfolio
