@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Sales Order with Department Categorization',
-    'version': '1.0',
+    'version': '8.0.1.0.0',
     'category': 'Generic Modules/Sales & Purchases',
     'description': """
 Add the department on Sales Order and Customer Invoices

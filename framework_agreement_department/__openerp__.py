@@ -17,7 +17,7 @@
 
 {
     'name': 'Framework Agreements with Department Categorization',
-    'version': '2.0',
+    'version': '8.0.2.0.0',
     'category': 'Generic Modules/Sales & Purchases',
     'author': "Camptocamp,Odoo Community Association (OCA)",
     "license": "AGPL-3",
