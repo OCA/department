@@ -29,6 +29,6 @@ Unported addons
 ---------------
 addon | version | summary
 --- | --- | ---
-[hr_timesheet_department](__unported__/hr_timesheet_department/) | 1.0 (unported) | Analytic Accounts / Contracts Department Categorization
+[hr_timesheet_department](hr_timesheet_department/) | 1.0 (unported) | Analytic Accounts / Contracts Department Categorization
 
 [//]: # (end addons)
