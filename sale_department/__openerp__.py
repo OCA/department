@@ -11,5 +11,5 @@ Add the department on Sales Order and Customer Invoices
     'website': 'http://camptocamp.com',
     'depends': ['sale', 'invoice_department', 'hr'],
     'data': ['sale_view.xml'],
-    'installable': True,
+    'installable': False,
 }

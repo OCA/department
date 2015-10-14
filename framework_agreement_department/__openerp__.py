@@ -25,5 +25,5 @@
     'depends': ['framework_agreement', 'hr'],
     'data': ['view/agreement.xml',
              'view/portfolio.xml'],
-    'installable': True,
+    'installable': False,
 }

@@ -11,5 +11,5 @@ Add the department on Invoices as well as the related
     'license': 'AGPL-3',
     'depends': ['account', 'hr'],
     'data': ['invoice_view.xml'],
-    'installable': True,
+    'installable': False,
 }

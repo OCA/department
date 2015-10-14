@@ -38,7 +38,7 @@ Project's defined Department.
         'project_issue_view.xml',
         'security/ir.model.access.csv',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
     'auto_install': True,
 }
