@@ -28,6 +28,7 @@ class AnalyticLine(models.Model):
     department_id = fields.Many2one(
         'hr.department',
         'Department',
+        default=_get_department,
         help="User's related department")
     account_department_id = fields.Many2one(
         comodel_name='hr.department',
@@ -35,5 +36,4 @@ class AnalyticLine(models.Model):
         string='Account Department',
         store=True,
         readonly=True,
-        default=_get_department,
         help="Account's related department")
