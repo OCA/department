@@ -10,6 +10,9 @@ Add the department on Invoices as well as the related
     'website': 'http://camptocamp.com',
     'license': 'AGPL-3',
     'depends': ['account', 'hr'],
-    'data': ['invoice_view.xml'],
+    'data': [
+        'invoice_view.xml',
+        'report/account_invoice_report_view.xml',
+    ],
     'installable': True,
 }
