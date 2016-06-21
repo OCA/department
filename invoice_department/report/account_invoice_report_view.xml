@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="invoice_department_view_account_invoice_report_search"
+                model="ir.ui.view">
+            <field name="name">invoice_department.invoice.report.search</field>
+            <field name="model">account.invoice.report</field>
+            <field name="inherit_id"
+                   ref="account.view_account_invoice_report_search"/>
+            <field name="arch" type="xml">
+                <filter name="category_product" position="after">
+                    <filter string="Department"
+                            icon="terp-stock_symbol-selection"
+                            name="department_id"
+                            context="{'group_by':'department_id'}"/>
+                </filter>
+            </field>
+        </record>
+    </data>
+</openerp>
