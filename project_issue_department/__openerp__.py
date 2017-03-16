@@ -28,7 +28,7 @@ Selecting a Project for an issue will automatically populate this with the
 Project's defined Department.
 """,
     'author': "Daniel Reis,Odoo Community Association (OCA)",
-    'website': 'daniel.reis@securitas.pt',
+    'website': 'https://odoo-community.org',
     'license': 'AGPL-3',
     'depends': [
         'project_issue',
