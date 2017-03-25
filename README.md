@@ -9,6 +9,7 @@ This project aims to add Department context information to Odoo Models.
 This can help organizations where processes are strongly organized by Department.
 
 [//]: # (addons)
+
 Available addons
 ----------------
 addon | version | summary
