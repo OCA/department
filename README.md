@@ -26,6 +26,7 @@ addon | version | summary
 [purchase_requisition_department](purchase_requisition_department/) | 8.0.1.0.0 | Tenders with Department Categorization
 [sale_department](sale_department/) | 8.0.1.0.0 | Sales Order with Department Categorization
 
+
 Unported addons
 ---------------
 addon | version | summary
