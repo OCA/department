@@ -27,9 +27,9 @@ class ProjectIssue(orm.Model):
         'department_id': fields.many2one('hr.department', 'Department'),
     }
 
-    def on_change_project(self, cr, uid, ids, proj_id=False, context=None):
+    def onchange_project(self, cr, uid, ids, proj_id=False, context=None):
         """When Project is changed: copy it's Department to the issue."""
-        res = super(ProjectIssue, self).on_change_project(
+        res = super(ProjectIssue, self).onchange_project(
             cr, uid, ids, proj_id, context=context)
         res.setdefault('value', {})
 
@@ -43,5 +43,3 @@ class ProjectIssue(orm.Model):
                 res['value'].update({'department_id': None})
 
         return res
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
