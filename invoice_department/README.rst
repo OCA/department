@@ -12,7 +12,7 @@ the search form and Account Analysis
 Known issues / Roadmap
 ======================
 * User with many employees the default invoice department should be the first
-user employee.
+  user employee.
 
 Contributors
 ------------
